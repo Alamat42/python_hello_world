@@ -7,6 +7,7 @@ print()
 print(len(a))
 
 for i in range(len(a)):
+    print(a[i])
     print('a[', i, '] = ', a[i], sep = '', end = '; ')
 
 print()
