@@ -1,12 +1,12 @@
-a = int(input('vvedi chislo: '))
-half = a // 2 + a % 2
+# a = int(input('vvedi chislo: '))
+# half = a // 2 + a % 2
 
-for i in range(half):
-    spaces =(half - i - 1)
-    stars = (half + i) - spaces
-    print(' ' * spaces, '*' * stars, spaces, stars)
-for i in range(a-2):
-    print()
+# for i in range(half):
+#     spaces =(half - i - 1)
+#     stars = (half + i) - spaces
+#     print(' ' * spaces, '*' * stars, spaces, stars)
+# for i in range(a-2):
+#     print()
 
 
 
@@ -25,3 +25,16 @@ for i in range(a-2):
 #   ***   spaces = 2, stars = 3
 #  *****  spaces = 1, stars = 5
 # ******* spaces = 0, stars = 7
+a = int(input('vvedi chislo: '))
+half = a // 2 + a % 2
+
+for i in range(half):
+    spaces =(half - i - 1)
+    stars = (half + i) - spaces
+    print(' ' * spaces, '*' * stars, spaces, stars)
+
+for i in range(a // 2 - 1, -1, -1):
+    spaces = (a - stars) // 2 + 1
+    stars = 2 * i + 1
+    print(" " * spaces + "*" * stars)
+    
