@@ -6,3 +6,11 @@ for a in range(2):
         for c in range(2):
             for d in range(2):
                 print(a, b, c, d, F(a, b, c, d))
+
+# a b c d F
+# 0 0 0 1 0
+# 0 1 0 1 0
+# 1 0 1 1 0
+# 1 1 0 1 0
+
+#  c  d   b a 

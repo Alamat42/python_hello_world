@@ -21,3 +21,4 @@ for x in range(len(d)):
     #print(d[x] + c[x])
     v.append(d[x]+c[x])
 print(v)
+
