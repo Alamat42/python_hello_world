@@ -1,20 +1,15 @@
 # 0123456789ab
-def f(n):
+# hex
+def to_str(n):
     s=''
     while n>0:
-        x = n % 12
-        if x == 11:
-            s = "b" + s
-        elif x == 10:
-            s = 'a' + s
-        else:
-            s=str(x)+s
+        s = f'{n % 12:x}' + s
         n= n // 12
     return s
 
 # 100000 = 12 ** 5 bbbbbb = 12 ** 6
 
-def g(s):
+def condition(s):
     if s.count('b') != 1:
         return False
     count = 0
@@ -26,8 +21,14 @@ def g(s):
     
 count = 0
 for n in range(12 ** 5, 12 ** 6):
-    if g(f(n)):
+    if condition(to_str(n)):
         count += 1
 
 print(count)
+count = sum([int(condition(to_str(n))) for n in range(12 ** 5, 12 ** 6)])
+
+print(count)
+
+# 0123456789abcdef
+#
 
