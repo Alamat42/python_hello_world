@@ -14,8 +14,8 @@ def f(left, right):
 # [1 4]; [2 4]; [3 4]
 # [1 5]; [2 5]; [3 5] [4 5]
 res = 10000
-for right in range(-100, 10000):
-    for left in range(-100, right):
+for right in range(10000):
+    for left in range(right):
         if f(left, right) and right - left < res:
             res = right - left
             print(right - left)
